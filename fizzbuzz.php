@@ -1,8 +1,10 @@
 <?php
 
-if (! isset($argv[1])) exit('no argv');
-
-$number = $argv[1];
+if (! isset($argv[1])) {
+    $number = 15;
+} else {
+    $number = $argv[1];
+}
 
 if (! preg_match('/^\d*$/', $number)) exit('input error');
 
