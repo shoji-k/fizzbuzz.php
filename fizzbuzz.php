@@ -22,7 +22,7 @@ function echoFizzBuzz($num) {
     }
 
     if ($num % 5 == 0) {
-        echo 'Bizz',PHP_EOL;
+        echo 'Buzz',PHP_EOL;
         return;
     }
     echo $num, PHP_EOL;
