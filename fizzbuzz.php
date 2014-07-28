@@ -9,23 +9,25 @@ if (! isset($argv[1])) {
 if (! preg_match('/^\d*$/', $number)) exit('input error');
 
 for($i = 1; $i < $number + 1; $i++) {
-    echoFizzBuzz($i);
+    $str = evaluate($i);
+    echoFizzBuzz($str);
 }
 
-function echoFizzBuzz($num) {
+function evaluate($num) {
     if ($num % 15 == 0) {
-        echo 'FizzBuzz',PHP_EOL;
-        return;
+        return 'FizzBuzz';
     }
 
     if ($num % 3 == 0) {
-        echo 'Fizz',PHP_EOL;
-        return;
+        return 'Fizz';
     }
 
     if ($num % 5 == 0) {
-        echo 'Buzz',PHP_EOL;
-        return;
+        return 'Buzz';
     }
-    echo $num, PHP_EOL;
+    return $num;
+}
+
+function echoFizzBuzz($str) {
+    echo $str, PHP_EOL;
 }
