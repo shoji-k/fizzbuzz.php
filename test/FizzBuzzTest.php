@@ -12,7 +12,7 @@ class FizzBuzzTest extends PHPUnit_Framework_TestCase
 
     protected function setUp()
     {
-        $this->object = new FizzBuzz(1,15);
+        $this->object = new FizzBuzz(1, 15);
     }
 
     protected function tearDown()

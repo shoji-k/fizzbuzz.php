@@ -7,7 +7,9 @@ if (! isset($argv[1])) {
     $number = $argv[1];
 }
 
-if (! preg_match('/^\d*$/', $number)) exit('input error');
+if (! preg_match('/^\d*$/', $number)) {
+    exit('input error');
+}
 
 $obj = new FizzBuzz(1, $number);
 $obj->publish();
